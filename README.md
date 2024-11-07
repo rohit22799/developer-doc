@@ -349,3 +349,21 @@ class Event(models.Model):
     def mail_user_confirm(self):
         ...
 ```
+
+# Multi Company Support
+
+Model must have multi company support. for multi company support add following block in models.
+
+```python
+company_id = fields.Many2one('res.company', required=True, default=lambda self: self.env.company)
+```
+
+# Multi Website Support
+
+if data of Model is published on data then model must have multi website support. also add publishable mixin to make content publish or unpublish. for multi website support add following block in models
+
+```python
+_inherit = ['website.published.multi.mixin']
+
+website_id = fields.Many2one('website')
+```
