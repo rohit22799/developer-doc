@@ -393,7 +393,7 @@ website_id = fields.Many2one('website')
 ## View Definitions
 
 - Define views within < record > elements using the model ir.ui.view:
-```xml
+```
 			<record id="view_order_tree" model="ir.ui.view">
     			<field name="name">sale.order.tree</field>
     			<field name="model">sale.order</field>
