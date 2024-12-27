@@ -394,17 +394,17 @@ website_id = fields.Many2one('website')
 
 - Define views within < record > elements using the model ir.ui.view:
 ```xml
-			<record id="view_order_tree" model="ir.ui.view">
-    			<field name="name">sale.order.tree</field>
-    			<field name="model">sale.order</field>
-    			<field name="arch" type="xml">
-       			 <tree string="Sales Orders">
-            			<field name="name"/>
-            			<field name="partner_id"/>
-            			<field name="amount_total"/>
-       	 		</tree>
-   			 </field>
-			 </record>
+<record id="view_order_tree" model="ir.ui.view">
+	<field name="name">sale.order.tree</field>
+	<field name="model">sale.order</field>
+	<field name="arch" type="xml">
+		 <tree string="Sales Orders">
+			<field name="name"/>
+			<field name="partner_id"/>
+			<field name="amount_total"/>
+		</tree>
+	 </field>
+ </record>
 ```
 **Naming Conventions**
 
@@ -413,8 +413,8 @@ website_id = fields.Many2one('website')
 
  **Consistent Layout:**
 
-    - Align and group fields logically.
-    - Use **group**, **notebook**, or **page** elements to separate sections.
+- Align and group fields logically.
+- Use **group**, **notebook**, or **page** elements to separate sections.
 
   **Attributes**
 
