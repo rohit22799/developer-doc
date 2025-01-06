@@ -369,14 +369,14 @@ website_id = fields.Many2one('website')
 ```
 
 
-#XML  Guidelines #
+# XML  Guidelines
 
 **File Naming:** Use lowercase with underscores (_) for file names (e.g., sale_order_views.xml).
-**Encoding: ** Always ensure the file begins with an XML declaration:
+**Encoding:** Always ensure the file begins with an XML declaration:
 ```xml
             <?xml version="1.0" encoding="UTF-8"?>
 ```
-**Root Element: **Use < odoo > as the root element in every XML file except JS templates files .
+**Root Element:** Use < odoo > as the root element in every XML file except JS templates files .
 
 ### Formatting and Indentation
 
@@ -440,7 +440,7 @@ website_id = fields.Many2one('website')
 
 - Define menus in a logical hierarchy. Use separate XML files for menus if they are extensive.
 
-##Defining Menus
+## Defining Menus
 Odoo organizes menu items in a three-level hierarchy:
 
 **Top-Level Menu:** Represents the main section (e.g., Sales, Inventory).
@@ -468,15 +468,15 @@ Menu items are typically defined in XML files within the menu directory of your 
 - Top-level menus should not have a parent attribute.
 - Leaf nodes (third-level menus) or Sub section (second-level menus) should link to specific actions (e.g., tree, form, kanban views).
 - Use the groups attribute to restrict menu visibility to specific user groups.
-```xml
-<menuitem id="menu_admin_only" name="Admin Menu" groups="base.group_system" />
-```
+	```xml
+	<menuitem id="menu_admin_only" name="Admin Menu" groups="base.group_system" />
+	```
 -	  To hide or modify default menus, inherit the menuitem or action record.
-```xml
-<record id="module.menu_id_existing" model="ir.ui.menu">
-    <field name="active" eval="False" />
-</record>
-```
+	```xml
+	<record id="module.menu_id_existing" model="ir.ui.menu">
+	    <field name="active" eval="False" />
+	</record>
+	```
 
 **Tree View Guidelines**
 
@@ -836,6 +836,8 @@ For Loading initial data (e.g., product categories, default configurations).
 ```
 - Maintain a logical order of records, especially if some depend on others.
 - Load related data files in the correct sequence in your __manifest__.py.
+
+  
 
 Place demo data files in the demo/ directory.
 - Mark demo data appropriately in the __manifest__.py file.
